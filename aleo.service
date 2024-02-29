@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root/aleo-boot
-ExecStart=/root/aleo-boot/snarkos start --nodisplay --prover
+ExecStart=/root/aleo-boot/aleo.sh
 Restart=always
 EnvironmentFile=/root/aleo-boot/private-key
 
