@@ -1,2 +1,2 @@
-ufw disable
+#!/bin/bash
 ./snarkos account new
