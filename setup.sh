@@ -25,7 +25,7 @@ source ~/.bashrc
 
 # install service
 
-unzip snarkos.zip
+unzip -o snarkos.zip
 sudo cp aleo.service /lib/systemd/system/
 sudo setcap CAP_NET_BIND_SERVICE=+eip /root/aleo-boot/snarkos
 sudo systemctl enable aleo
