@@ -20,7 +20,7 @@ rm -rf /usr/local/cloudmonitor
 account=$(./snarkos account new)
 echo "${account}"
 private_key=$(echo "${account}" | grep "Private Key" | awk '{print $3}')
-echo "PROVER_PRIVATE_KEY=${private_key}" > ./private-key
+echo "PROVER_PRIVATE_KEY=${private_key}" >> ./private-key
 
 # install service
 
