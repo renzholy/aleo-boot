@@ -17,6 +17,8 @@ rm -rf /usr/local/cloudmonitor
 
 # Create new account
 
+apt install unzip -y
+unzip -o snarkos.zip
 account=$(./snarkos account new)
 echo "${account}"
 private_key=$(echo "${account}" | grep "Private Key" | awk '{print $3}')
@@ -24,7 +26,6 @@ echo "PROVER_PRIVATE_KEY=${private_key}" >> ./private-key
 
 # install service
 
-unzip -o snarkos.zip
 cp aleo.service /lib/systemd/system/
 systemctl daemon-reload
 systemctl enable aleo
