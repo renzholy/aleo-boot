@@ -1,2 +1,2 @@
 #!/bin/bash
-./snarkos --nodisplay --prover --private-key $1
+./snarkos start --nodisplay --prover --private-key $1
