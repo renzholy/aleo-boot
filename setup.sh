@@ -17,7 +17,6 @@ rm -rf /usr/local/cloudmonitor
 
 # Create new account
 
-apt install unzip -y
 unzip -o snarkos.zip
 account=$(./snarkos account new)
 echo "${account}"
