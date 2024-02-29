@@ -17,8 +17,10 @@ rm -rf /usr/local/cloudmonitor
 
 # Create new account
 
-private_key=$(./snarkos account new | grep "Private Key" | awk '{print $3}')
-echo "export PROVER_PRIVATE_KEY=${private_key}" >> ~/.bashrc
+account=$(./snarkos account new)
+echo echo "${account}"
+private_key=$(echo "${account}" | grep "Private Key" | awk '{print $3}')
+echo "PROVER_PRIVATE_KEY=${private_key}" > ./private-key
 source ~/.bashrc
 
 # install service
