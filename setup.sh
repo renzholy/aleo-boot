@@ -18,7 +18,7 @@ rm -rf /usr/local/cloudmonitor
 # Create new account
 
 account=$(./snarkos account new)
-echo echo "${account}"
+echo "${account}"
 private_key=$(echo "${account}" | grep "Private Key" | awk '{print $3}')
 echo "PROVER_PRIVATE_KEY=${private_key}" > ./private-key
 source ~/.bashrc
